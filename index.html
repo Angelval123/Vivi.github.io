@@ -24,8 +24,9 @@ body  {
 	background: linear-gradient(to bottom right, #ffecec, #fff5f5, #ffebeb);
 	color: #333;
 	display: flex;
-  flex-direction: column;
-  align-items: center;
+    flex-direction: column;
+    align-items: center;
+	justify-content: center;
 	min-height: 100vh;
 	margin: 0;
 	padding: 1rem;
@@ -83,12 +84,12 @@ body  {
 
 @media (min-width: 720px) {
 	.envelope {
-		--envelope-width: 600px;
+		--envelope-width:600px;
 		--envelope-height: 350px;
-		--letter-font-size: 1.6rem;
+		--letter-font-size: 2rem;
 		--snowman-width: 130px;
 		--bells-width: 60px;
-		--front-font-size: 1.25rem;
+		--front-font-size: 3rem;
 	}
 }
 /* shadow */
@@ -140,7 +141,7 @@ body  {
 	background-color: var(--envelope-clr-bg);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	perspective: 1000px;
+	perspective: 10000px;
 	isolation: isolate;
 }
 
@@ -270,7 +271,7 @@ body  {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
     width: 100%;
     margin-top: 20px;
 }
@@ -283,7 +284,7 @@ body  {
 }
 
 .boton-si, .boton-no {
-    font-size: 18px;
+    font-size: 58px;
     font-weight: bold;
     padding: 12px 24px;
     border: none;
