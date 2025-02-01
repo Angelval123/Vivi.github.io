@@ -8,9 +8,7 @@
 
 </head>
 <body>
-    <div class="botones" id="buttons1">
-        <button class="boton-si" onclick="window.location.href='floresamarillas.html'">Sí</button>
-    </div>
+
     
 <!-- partial:index.partial.html -->
 <style>
@@ -26,8 +24,8 @@ body  {
 	background: linear-gradient(to bottom right, #ffecec, #fff5f5, #ffebeb);
 	color: #333;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+  flex-direction: column;
+  align-items: center;
 	min-height: 100vh;
 	margin: 0;
 	padding: 1rem;
@@ -253,7 +251,89 @@ body  {
     font-weight: bold; 
 }
 
+.containerboton{
+	display: flex;
+	align-items: center;
+}
+
+.botones {
+    display:flex;
+    flex-direction:column; /* Cambia de column a row */
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center;
+    gap: 20px;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.containerboton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.boton-si, .boton-no {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boton-si {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.boton-si:hover {
+    background-color: #388E3C;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.boton-si:active {
+    transform: scale(1.2);
+}
+
+.boton-no {
+    background-color: #E53935;
+    color: white;
+}
+
+.boton-no:hover {
+    background-color: #C62828;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.boton-no:active {
+    transform: scale(1.2);
+}
+
+
 </style>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 <div class="envelope">
 
 	<div class="envelope-inner">
@@ -293,9 +373,19 @@ body  {
 
 </div>
 
+
+<br>
+<br>
+<div class="containerboton">
+<div class="botones" id="buttons1">
+	<button class="boton-si" onclick="window.location.href='floresamarillas.html'">Sí</button>
+</div>
+
 <div class="botones" id="buttons2">
     <button class="boton-no" onclick="window.location.href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqb83eXdvQlRYcsng_dBIPRJBDvOAWU5L9UQ&s'">No</button>
 </div>
+</div>
+
 
 
 <!-- partial -->
@@ -324,6 +414,7 @@ body  {
         document.getElementById("buttons2").style.display = "block";
     }, 5000);
 </script>
+
 
 
 
